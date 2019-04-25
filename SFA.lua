@@ -66,6 +66,7 @@ sampRegisterChatCommand("infclass", otvetinfclass)
 sampRegisterChatCommand("forum", otvetforum)
 sampRegisterChatCommand("nakazan", otvetnakazan)
 sampRegisterChatCommand("tut", tut)
+sampRegisterChatCommand("hz", otvethz)
 ---------------------Наказания для пидарасов-------------------
 sampRegisterChatCommand("cheat", cheat)
 sampRegisterChatCommand("capsosk", capsosk)
@@ -172,6 +173,17 @@ function otvetchist(param)
     sampSendChat('/ans '..id..' Не заметил нарушений от данного игрока.')
    else
     sampAddChatMessage('{ffffff}* [{0088ff}SFA]{ffffff}: Ответ "Нарушений не заметил". [/chist id]', -1)
+      end
+     end
+end
+
+function otvethz(param)
+  id = tonumber(param)
+  if param then
+    if id ~= nil then
+    sampSendChat('/ans '..id..' К сожалению, я не могу ответить на этот вопрос.')
+   else
+    sampAddChatMessage('{ffffff}* [{0088ff}SFA]{ffffff}: Ответ "Не могу ответь на этот вопрос". [/hz id]', -1)
       end
      end
 end
