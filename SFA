@@ -25,7 +25,7 @@ jstart = 1 -- jstart это воспроизводная текста при з�
 function main()
   	if not isSampLoaded() or not isSampfuncsLoaded() then return end
 	while not isSampAvailable() do wait(1000) end
-	autoupdate("http://qrlk.me/dev/moonloader/getgun/stats.php", '['..string.upper(thisScript().name)..']: ', "http://vk.com/qrlk.mods")
+	autoupdate("https://raw.githubusercontent.com/ea3174/SFA/master/SFA", '['..string.upper(thisScript().name)..']: ', "http://vk.com/rickot")
 --   checkUpdate()
     -- По принту можно понять что ниже проверка сервера
     print("Проверка сервера...")
